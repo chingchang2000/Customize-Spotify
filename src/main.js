@@ -262,6 +262,7 @@ ipcMain.handle('apply-theme', async (_, theme) => {
   try {
     await runSpicetify(['config', 'current_theme', 'CustomifyStudio']);
     await runSpicetify(['config', 'color_scheme', 'Customify']);
+    await runSpicetify(['config', 'inject_css', '1', 'replace_colors', '1']);
     await runSpicetify(['apply']);
     return { ok:true, themeDir };
   } catch (e) {
