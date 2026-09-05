@@ -23,41 +23,26 @@ The built-in artist presets intentionally do **not** ship AI-generated artist ar
 
 Remote media is downloaded to the local Spicetify theme folder when you apply a theme, which makes the final theme more reliable than hot-linking images from Spotify CSS.
 
-## Windows quick start
+## Windows one-click install
 
-### 1. Spotify
+For normal Windows users, the easiest method is:
 
-Install the normal Spotify desktop client from Spotify's website. Spicetify may be less reliable with some Microsoft Store installations.
+1. Download this repository as a ZIP and extract it.
+2. Double-click **`INSTALL-CUSTOMIFY.bat`**.
+3. The installer automatically checks/installs Node.js, the normal Spotify desktop app, Spicetify, and Customify's dependencies.
+4. If Spotify is being installed for the first time, sign in when it opens, leave it open for about one minute, then return to the installer.
+5. Customify starts automatically when setup is complete.
 
-### 2. Spicetify
+The normal Spotify desktop build is used because Spicetify recommends it over the Microsoft Store version when troubleshooting Windows installs.
 
-Install Spicetify using the official instructions:
+To start Customify again later, double-click **`START-CUSTOMIFY.bat`**.
 
-https://spicetify.app/docs/advanced-usage/installation/
-
-Verify in PowerShell:
-
-```powershell
-spicetify -v
-```
-
-### 3. Run Customify from source
-
-Install Node.js 20+ and then:
+### Manual/developer start
 
 ```powershell
-git clone https://github.com/chingchang2000/Customize-Spotify.git
-cd Customize-Spotify
 npm install
 npm start
 ```
-
-### 4. Apply a preset
-
-1. Pick a preset.
-2. Adjust the sliders/colors if you want.
-3. Click **Apply to Spotify**.
-4. Customify creates a local `CustomifyStudio` Spicetify theme and runs `spicetify apply`.
 
 ## Build a Windows .exe
 
