@@ -1,0 +1,35 @@
+{
+  "name": "customify-for-spotify",
+  "version": "1.0.0",
+  "description": "A clean Windows desktop studio for customizing Spotify through Spicetify.",
+  "main": "src/main.js",
+  "author": "chingchang2000",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist": "electron-builder --win nsis",
+    "pack": "electron-builder --dir"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.customify.spotify",
+    "productName": "Customify",
+    "asar": true,
+    "files": ["src/**/*", "package.json", "README.md", "LICENSE"],
+    "win": {
+      "target": ["nsis"],
+      "artifactName": "Customify-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
